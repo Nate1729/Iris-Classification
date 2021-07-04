@@ -19,8 +19,6 @@ data = scaler.transform(data)
 for ind, label in enumerate(input_label):
 	df[label] = data[:, ind]
 
-print(df.head())
-
 k = 3
 km = KMeans(n_clusters=k)
 y_predicted = km.fit_predict(df[input_label])
